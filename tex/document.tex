@@ -3,6 +3,9 @@
 
 \usepackage{xspace}
 \usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage[a4paper, total={6in, 9in}]{geometry}
 
 % Define a few constants used in the report that we can change here if needed
 \newcommand{\winningaccuracy}{86\%\xspace}
@@ -48,9 +51,209 @@ The ultimate aim of this research is to create a model that, given certain custo
 
 \section{Methods}
 
-In this section we present an overview of the steps taken from cleaning all the way to applying models to the data. For more detail, please see the source code here
+\subsection{Datasets}
+
+In this section we present an overview of the steps taken from cleaning all the way to applying models to the data. For more detail, please see the source code \href{https://github.com/ray33ee/Understanding-predicting-and-preventing-churn/blob/main/Customer%20Churn%20Analysis.ipynb}{here}.
+
+In our journey to predict customer churn we will focus on two datasets:
+
+\begin{itemize}
+	\item \href{https://www.kaggle.com/datasets/gauravtopre/bank-customer-churn-dataset}{Dataset A}
+	\item \href{https://www.kaggle.com/datasets/willianoliveiragibin/bank-churn-prediction}{Dataset B}
+\end{itemize}
+
+These datasets both contain attributes and information on their customers, and whether they have churned from the bank. These datasets have 11 attributes in common, namely:
+
+\begin{itemize}
+	\item \textbf{Age} - Stored as a single number
+	\item \textbf{Credit score} – A number between 0 and 999
+	\item \textbf{Country} – Either France, Germany or Spain. Country is stored differently in both sets, one stores it as a string, and one stores as as three separate columns with a ‘1’ indicating that country. We will use the latter strategy, so the former dataset will have to be modified to reflect this. This can be implemented trivially in Python
+	\item \textbf{Gender} – Stored as ‘Male’ or ‘Female’ in one source, and as two columns in the second. Once again the approach of having two columns will be used.
+	\item \textbf{Tenure} – The number of years the customer has been with the bank
+	\item \textbf{Account Balance} – Customer bank balance
+	\item \textbf{Number of Products} – Number of financial products the customer has purchased from the bank
+	\item \textbf{Credit Card} – 0 or 1 depending on if they have a credit card or not
+	\item \textbf{Estimated salary} – Number indicating salary
+	\item \textbf{Active Member} – 1 if the customer is active and using their account, 0 if not
+	\item \textbf{Customer Churn} – 1 indicating that the customer has left the bank, 0 indicating they are still a customer
+\end{itemize}
+
+There are certain attributes that are deemed irrelevant (such as the names of the customers), redundant (attributes that are composites of other attributes, such as the Age/Tenure product) and also attributes that are not common to both datasets. These attributes we omit, sticking to the 11 mentioned above. This forms the first step for merging the datasets, only keep attributes that are common to both and drop all others.
+
+\subsection{Cleaning}
+
+In this subsection we outline the methods for cleaning and merging then removing outliers and normalising the combined datasets.
+
+\subsubsection{Loading}
+
+On downloading and reading the csv files into dataframes, pandas gives a warning that columns have mixed types for dataset B. This will be addressed in the next section, for now we drop columns that are not present in both datasets to leave us with the columns we will use.
+
+\subsubsection{Invalid Numbers}
+
+On further inspection we see that the columns for credit score, age, tenure and number of products are all floating values. This is mostly due to formatting (These values are floating in the csv files) but there are also some invalid numbers in the age and the estimated salary columns. To solve this, we create some helper functions that convert a value into a floating number, and integer or a binary value. If the conversion fails, we replace the number with null. After we apply the appropriate conversion for each column, we then drop all entries containing null values effectively removing entries with invalid formatting. We then convert the columns to the correct types, integers for credit score, age, tenure and number of products. We also take this time to check for NaN values, but none exist so no further action is needed.
+
+\subsubsection{One-hot encoding}
+
+The Country and gender columns in dataset A store these attributes as string values. Since we are using statistical techniques that will not work with this format, we use one-hot encoding to convert the categorical data into numerical.
+
+\subsubsection{Renaming columns}
+
+The columns are labelled differently in both datasets, so we create a mapping of old columns names to new column names, and apply this to both datasets so columns representing the same data will have the same name.
+
+\subsubsection{Types}
+
+At this point we check the dtype of all the columns, which are floating for AccountBalance and EstimatedSalary, and integer for the rest as expected.
+
+\subsubsection{Merging}
+
+At this point the datasets have been cleaned, null values removed, and column names synced up so the datasets are concatenated into a single dataframe.
+
+\subsubsection{Shuffle}
+
+To remove any bias that may exist in entering the values, and that certainly exists by concatenating the two different datasets, we shuffle the dataset.
+
+\subsubsection{Outliers}
+
+Using the IQR test for detecting outliers on the following attributes:
+
+\begin{itemize}
+	\item Age
+	\item Tenure
+	\item Credit Score
+	\item Account balance
+	\item Estimated Salary
+	\item Number of products
+	\item Has credit card?
+	\item Is active member
+\end{itemize}
+
+And this identifies 6690 outliers namely from the ‘Credit Score’, ‘Age’ and ‘Number of products’ attributes, which we remove from the dataset
+
+\subsubsection{Normalising}
+
+Finally, since most of the techniques require the data to be normalised, we do this for all attributes (Except customer churn which must remain categorical) by subtracting the mean and dividing my the standard deviation for all columns.
+
+\subsection{Visualising}
+
+Now the data is cleaned and normalised we can apply 2 component and 3 component PCA analysis on the data (we do not use the ‘Churn’ columns in PCA) and plot the data on 2D and 3D scatter plots, respectively, and colour by churn. This gives us a way to visualise the multi-dimensional data, and hopefully allow us to see a difference between churned and non-churned data. Visualising PCA will give us a clue as to how easy the data will be to classify, as if churned and non-churned data has little overlap, then this is a strong indicator that the data will be easy to classify.
+
+\subsection{Models}
+
+Now that the data is ready to be analysed, we split the data into training and validation sets and apply a range of models to the data. Our goal in this is of course to predict churn, which comes in two categories, churned and not churned. Because of this, the types of models we use are classifiers and regression models. In this analysis we try 9 different models and compare their effectiveness, namely:
+
+\begin{itemize}
+	\item \href{https://github.com/microsoft/LightGBM}{LightGBM} - A fast gradient boosting framework based on decision trees
+	\item \href{https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html}{Logistic Regression}
+	\item \href{https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html}{Random Forest classifier}
+	\item \href{https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html}{Gradient Boosting classifier}
+	\item \href{https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html}{MLP classifier}
+	\item \href{https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.AdaBoostClassifier.html}{Ada Boost classifier}
+	\item \href{https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html}{K-nearest neighbours}
+	\item \href{https://scikit-learn.org/stable/modules/generated/sklearn.discriminant_analysis.LinearDiscriminantAnalysis.html}{Linear Discriminant Analysis}
+	\item \href{https://keras.io/api/models/sequential/#sequential-class}{Convolutional Neural Network} - Keras implementation of a sequential CNN model
+\end{itemize}
 
 \section{Results}
+
+Our first graph simply shows the ratio of churned to not churned customers in the dataset:
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.5]{churn_proportion}
+	\caption{Pie chart showing the proportion of the dataset that is churned (20.42\%) against the proportion that is not churned (79.58\%)}
+\end{figure}
+
+As we can see the dataset is heavily biased towards customers who have not churned. This is not surprising as, at least for successful companies, churn should be low. This bias is very important to keep in mind however, since optimising models to predict churn could result in finding local solutions which simply guess ‘not churn’ and do not predict at all. Because of the bias in the dataset, a model which trivially predicts ‘not churned’ would have an accuracy of around 80\%. Later on we discuss how we can look out for models that do this, and we even see an example of a poor neural network which takes this approach but looks to have a high accuracy.
+
+For the next few charts we compare the churned vs non-churned samples over various attributes including age, activity, number of products purchased, account balance, estimated salary, credit score and tenure. First we see the age attribute, which has the most obvious differences for churn and non churned customers:
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.4]{age_by_churn}
+	\caption{Historgram showing the distribution of age for non churned customers that has a positive skew, and a second histogram showing the distribution for churned customers which skews negatively. }
+\end{figure}
+
+As we will see not all plots show any correlation, but in this case there seems to be a strong link between age and churn. The not churned histogram skews left, showing a younger age, whereas the churned histogram skews right, possibly meaning that churned customers are older than not churned. Next we have customer activity:
+
+\clearpage
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.5]{activity_by_churn}
+	\caption{Historgram showing the distribution of age for non churned customers that has a positive skew, and a second histogram showing the distribution for churned customers which skews negatively. }
+\end{figure}
+
+Here we see that vastly more users are inactive in the churned group which could suggest that inactivity leads to churn. However, it is important to note here that we cannot say which way the correlation flows, and indeed in this case it is more likely that the explanation is that customers who leave become inactive. If the causation does flow this way, customer activity may not be an accurate way to predict churn, as churn may come after inactivity. Up next is a plot of the number of products purchased by customers:
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.5]{products_by_churn}
+	\caption{Historgram showing the distribution of age for non churned customers that has a positive skew, and a second histogram showing the distribution for churned customers which skews negatively. }
+\end{figure}
+
+Here again we see big differences between churn and not churned customers, namely that it is much more common for not-churned customers to have purchased more than one product. Purchasing more than one product could be a big indicator that a customer won’t churn. Finally we have plots for the other features, however these plots do not seem to show many differences between churn and not-churn so warrant no further discussion:
+\clearpage
+
+\begin{figure*}[t!]
+	\centering
+	\begin{subfigure}[t]{0.55\textwidth}
+		\centering
+		\includegraphics[height=2in]{account_balance_by_churn}
+		\caption{Account balances for churn and non-churned customers}
+	\end{subfigure}%
+	~ 
+	\begin{subfigure}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[height=2in]{estimated_salary_by_churn}
+		\caption{Estimated salaries for churn and non-churned customers}
+	\end{subfigure}
+	
+	\begin{subfigure}[t]{0.55\textwidth}
+		\centering
+		\includegraphics[height=2in]{credit_score_by_churn}
+		\caption{Credit scores for churn and non-churned customers}
+	\end{subfigure}%
+	~
+	\begin{subfigure}[t]{0.5\textwidth}
+		\centering
+		\includegraphics[height=2in]{tenure_by_churn}
+		\caption{Tenures for churn and non-churned customers}
+	\end{subfigure}
+	\caption{Frequency distrubutions by churn for account balance (a), estimated salary (b), credit scores (c) and tenure (d) showing no real difference between churn and non-churned customers}
+\end{figure*}
+
+The final section of our describtive statistics analysis summarises the plots we have seen so far with a correlation matrix:
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.47]{correlation}
+	\caption{Correlation matrix for all attributes showing a correlation between churn and age, account balance, number of products and activity}
+\end{figure}
+
+This correlation matrix confirms what we have seen so far, namely a correlation with churn against Age, number of products and activity, it also shows a correlation with tenure too.
+
+These results are extremely promising, as they show that the data is correlated and connected and that optimisation may be used to predict churn.
+
+Before we start optimising, our last step is to use PCA to reduce the dimensionality of the dataset to 2 or 3 dimensions, then plot these points on 2D and 3D scatter graphs, coloring points based on churn. Here are the results:
+
+\begin{figure*}[h!]
+	\centering
+	\begin{subfigure}[t]{0.55\textwidth}
+		\centering
+		\includegraphics[height=3in]{2d}
+		\caption{2D PCA visualisation with points coloured by churn}
+	\end{subfigure}
+	\begin{subfigure}[t]{0.55\textwidth}
+		\centering
+		\includegraphics[height=3in]{3d}
+		\caption{3D PCA visualisation with points coloured by churn}
+	\end{subfigure}
+	\caption{2D (a) and 3D (b) PCA visualisations showing no visible pattern between churn and non churned data points}
+\end{figure*}
+
+Since we removed churn from the PCA analysis, any differences in the churned vs not churned points would entirely be from the features and not churn itself. However, as we see from the plots, there are no discernable differences and there is a great overlap in the data. 
+
+As PCA has not given any extra insight into our dataset, we move on to applying our 9 models on the dataset to see if there is any way to extract meaning from the data. We summarise our results with confusion tables from predictions for all 9 models:
 
 \section{Conclusion}
 

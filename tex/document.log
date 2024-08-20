@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.8.20)  20 AUG 2024 21:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.8.20)  20 AUG 2024 22:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -174,74 +174,316 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip51
 )
+(C:\Users\willc\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\willc\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2024/05/23 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\willc\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(C:\Users\willc\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+
+(C:\Users\willc\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen146
+\Gin@req@width=\dimen147
+)
+(C:\Users\willc\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+
+(C:\Users\willc\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(C:\Users\willc\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen148
+\captionmargin=\dimen149
+\caption@leftmargin=\dimen150
+\caption@rightmargin=\dimen151
+\caption@width=\dimen152
+\caption@indent=\dimen153
+\caption@parindent=\dimen154
+\caption@hangindent=\dimen155
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count280
+\c@continuedfloat=\count281
+Package caption Info: hyperref package is loaded.
+)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count282
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count283
+) (C:\Users\willc\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(C:\Users\willc\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count284
+\Gm@cntv=\count285
+\c@Gm@tempcnt=\count286
+\Gm@bindingoffset=\dimen156
+\Gm@wd@mp=\dimen157
+\Gm@odd@mp=\dimen158
+\Gm@even@mp=\dimen159
+\Gm@layoutwidth=\dimen160
+\Gm@layoutheight=\dimen161
+\Gm@layouthoffset=\dimen162
+\Gm@layoutvoffset=\dimen163
+\Gm@dimlist=\toks18
+
+(C:\Users\willc\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+
 (C:\Users\willc\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count280
+\l__color_backend_stack_int=\count287
 \l__pdf_internal_box=\box52
 ) (document.aux)
 \openout1 = `document.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-Package hyperref Info: Link coloring OFF on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+Package hyperref Info: Link coloring OFF on input line 19.
  (document.out) (document.out)
 \@outlinefile=\write3
 \openout3 = `document.out'.
 
+
+(C:\Users\willc\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count288
+\scratchdimen=\dimen164
+\scratchbox=\box53
+\nofMPsegments=\count289
+\nofMParguments=\count290
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count291
+\MPscratchDim=\dimen165
+\MPnumerator=\count292
+\makeMPintoPDFobject=\count293
+\everyMPtoPDFconversion=\toks20
+)
+(C:\Users\willc\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:\Users\willc\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(81.94394pt, 433.62pt, 81.94394pt)
+* v-part:(T,H,B)=(77.84674pt, 650.43pt, 116.77011pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=433.62pt
+* \textheight=650.43pt
+* \oddsidemargin=9.67395pt
+* \evensidemargin=9.67395pt
+* \topmargin=-31.42325pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 18.
+(Font)              <12> on input line 21.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 18.
+(Font)              <8> on input line 21.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 18.
+(Font)              <6> on input line 21.
 
 
 [1
 
 {C:/Users/willc/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 
-[2] (document.aux)
+[2]
+
+[3]
+<churn_proportion.png, id=112, 343.2825pt x 302.8113pt>
+File: churn_proportion.png Graphic file (type png)
+<use churn_proportion.png>
+Package pdftex.def Info: churn_proportion.png  used on input line 162.
+(pdftex.def)             Requested size: 171.64082pt x 151.40527pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+[4]
+<age_by_churn.png, id=118, 562.2606pt x 343.2825pt>
+File: age_by_churn.png Graphic file (type png)
+<use age_by_churn.png>
+Package pdftex.def Info: age_by_churn.png  used on input line 172.
+(pdftex.def)             Requested size: 224.90025pt x 137.31056pt.
+
+
+[5 <./churn_proportion.png> <./age_by_churn.png>]
+<activity_by_churn.png, id=127, 562.2606pt x 343.2825pt>
+File: activity_by_churn.png Graphic file (type png)
+<use activity_by_churn.png>
+Package pdftex.def Info: activity_by_churn.png  used on input line 182.
+(pdftex.def)             Requested size: 281.12961pt x 171.64082pt.
+<products_by_churn.png, id=128, 583.2189pt x 343.2825pt>
+File: products_by_churn.png Graphic file (type png)
+<use products_by_churn.png>
+Package pdftex.def Info: products_by_churn.png  used on input line 190.
+(pdftex.def)             Requested size: 291.60873pt x 171.64082pt.
+
+
+[6
+
+ <./activity_by_churn.png> <./products_by_churn.png>]
+<account_balance_by_churn.png, id=137, 562.2606pt x 343.2825pt>
+File: account_balance_by_churn.png Graphic file (type png)
+<use account_balance_by_churn.png>
+Package pdftex.def Info: account_balance_by_churn.png  used on input line 201.
+(pdftex.def)             Requested size: 236.73982pt x 144.54pt.
+<estimated_salary_by_churn.png, id=138, 562.2606pt x 343.2825pt>
+File: estimated_salary_by_churn.png Graphic file (type png)
+<use estimated_salary_by_churn.png>
+Package pdftex.def Info: estimated_salary_by_churn.png  used on input line 207.
+
+(pdftex.def)             Requested size: 236.73982pt x 144.54pt.
+
+Overfull \hbox (19.92982pt too wide) in paragraph at lines 207--208
+ [][] 
+ []
+
+
+Overfull \hbox (26.12674pt too wide) in paragraph at lines 199--210
+ [][]  [] 
+ []
+
+<credit_score_by_churn.png, id=139, 562.2606pt x 343.2825pt>
+File: credit_score_by_churn.png Graphic file (type png)
+<use credit_score_by_churn.png>
+Package pdftex.def Info: credit_score_by_churn.png  used on input line 213.
+(pdftex.def)             Requested size: 236.73982pt x 144.54pt.
+<tenure_by_churn.png, id=140, 562.2606pt x 343.2825pt>
+File: tenure_by_churn.png Graphic file (type png)
+<use tenure_by_churn.png>
+Package pdftex.def Info: tenure_by_churn.png  used on input line 219.
+(pdftex.def)             Requested size: 236.73982pt x 144.54pt.
+
+Overfull \hbox (19.92982pt too wide) in paragraph at lines 219--220
+ [][] 
+ []
+
+
+Overfull \hbox (26.12674pt too wide) in paragraph at lines 211--222
+ [][]  [] 
+ []
+
+<correlation.png, id=141, 500.1084pt x 392.4261pt>
+File: correlation.png Graphic file (type png)
+<use correlation.png>
+Package pdftex.def Info: correlation.png  used on input line 229.
+(pdftex.def)             Requested size: 235.05098pt x 184.44029pt.
+
+
+[7
+
+ <./account_balance_by_churn.png> <./estimated_salary_by_churn.png> <./credit_s
+core_by_churn.png> <./tenure_by_churn.png> <./correlation.png>]
+<2d.png, id=155, 412.6617pt x 334.6101pt>
+File: 2d.png Graphic file (type png)
+<use 2d.png>
+Package pdftex.def Info: 2d.png  used on input line 243.
+(pdftex.def)             Requested size: 267.39575pt x 216.81pt.
+
+Overfull \hbox (28.90344pt too wide) in paragraph at lines 243--244
+ [][] 
+ []
+
+<3d.png, id=156, 460.3599pt x 476.982pt>
+File: 3d.png Graphic file (type png)
+<use 3d.png>
+Package pdftex.def Info: 3d.png  used on input line 248.
+(pdftex.def)             Requested size: 209.25334pt x 216.81pt.
+
+
+[8 <./2d.png> <./3d.png>]
+
+[9] (document.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-07-20>
  ***********
 Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: 1F9634FD6D0D1314EA65738673AFB64A;576.
+(rerunfilecheck)             Checksum: F3A6E274503392324A220079B70859F9;2051.
  ) 
 Here is how much of TeX's memory you used:
- 7678 strings out of 473898
- 121559 string characters out of 5726479
- 1936960 words of memory out of 5000000
- 30503 multiletter control sequences out of 15000+600000
- 562044 words of font info for 49 fonts, out of 8000000 for 9000
+ 10578 strings out of 473898
+ 173144 string characters out of 5726479
+ 1939960 words of memory out of 5000000
+ 33328 multiletter control sequences out of 15000+600000
+ 562958 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,6n,79p,454b,435s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,8n,79p,872b,526s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\willc\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1000.pk><C:/Users/willc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmbx12.pfb><C:/Users/willc/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmr10.pfb><C:/Users/willc/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmr12.pfb><C:/Users/willc/AppData/Local/Programs/MiKTeX/
-fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on document.pdf (2 pages, 68780 bytes).
+ts/cm/cmbx10.pfb><C:/Users/willc/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmbx12.pfb><C:/Users/willc/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmr10.pfb><C:/Users/willc/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/willc/AppData/Local/Program
+s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/willc/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb>
+Output written on document.pdf (9 pages, 526083 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
- 9 named destinations out of 1000 (max. 500000)
- 49 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 207 PDF objects out of 1000 (max. 8388607)
+ 36 named destinations out of 1000 (max. 500000)
+ 208 words of extra memory for PDF output out of 10000 (max. 10000000)
 
