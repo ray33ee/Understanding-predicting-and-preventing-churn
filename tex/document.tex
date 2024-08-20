@@ -1,0 +1,59 @@
+
+\documentclass[]{article}
+
+\usepackage{xspace}
+\usepackage{hyperref}
+
+% Define a few constants used in the report that we can change here if needed
+\newcommand{\winningaccuracy}{86\%\xspace}
+\newcommand{\winningfnrate}{11\%\xspace}
+
+% Title Page
+\title{Understanding, predicting and preventing Churn}
+\author{William RJ Cooper}
+
+
+\begin{document}
+\maketitle
+
+\section{Executive Summary}
+
+In this report we outline a model that can predict whether a customer will leave a business or not (churn) with around \winningaccuracy accuracy, using a few pieces of information readily available to most banks. Preventing churn is vital in most businesses, and predicting it is the first step. This report outlines a model that:
+
+\begin{itemize}
+	\item can predict customer churn can be predicted with \winningaccuracy accuracy
+	\item can output a percentage indicating how likely the customer is to leave or stay
+	\item has a low false negative rate (\winningfnrate) meaning it is unlikely for the model to predict that a churning customer will stay
+\end{itemize}
+
+This model for predicting customer churn and assigning a confidence value can be used to offer pre-made tiered packages to customers, with scaling value for money meaning that customers most likely to churn can be offered the most lucrative discounts or products to keep them from churning.
+
+\section{Introduction}
+
+Churn, customer attrition, customer retention, all refer to the loss of customers from a business. Henceforth referred to as simply churn, minimising the loss of customers from any business is beneficial to any business for several reasons:
+
+\begin{itemize}
+	\item It can cost \href{https://www.forbes.com/sites/jiawertz/2018/09/12/dont-spend-5-times-more-attracting-new-customers-nurture-the-existing-ones/#47efa3d45a8e}{5 times more} to acquire and sign a new customer than retain an existing one
+	\item According to a report by Harvard Business School, ‘increasing customer retention rates by 5\% \href{https://hbswk.hbs.edu/archive/the-economics-of-e-loyalty}{increases profits by 25\% to 95\%}’
+	\item 80\% of your future profits will come from just 20\% of your existing customers (Leading on the Edge of Chaos: The 10 Critical Elements for Success in Volatile Times by Emmett C. Murphy, Mark A. Murphy, 978-0735203129)
+\end{itemize}
+
+Any scheme that seeks to understand, predict and prevent customer churn may be able to increase profits, reduce costs and increase customer satisfaction. 
+
+Businesses often keep large amounts of data about their customers, and whether or not a customer has churned would also be easy to calculate. It is for this reason that this problem is perfect for data-driven solution as if there is a link between customer data and churn, these methods can find it.
+
+In this research we choose two datasets containing various information about customers including whether or not they have churned. Even though these datasets are from bank customers and I am not in banking myself, there is no reason why the approach we use here could not be used for other datasets from businesses in other areas. This is why I chose this project, because customer churn affects almost every business. 
+
+The ultimate aim of this research is to create a model that, given certain customer attributes will predict whether a customer will churn or not. Our final model also has some benefits over other models that it also outputs a confidence value based on how likely it is to be correct, and can be interpreted as a value showing how likely it is that a customer will churn or not. This has the added benefit that this confidence value could be used to implement a tiered system to offer increasingly valuable products or discounts to customers who are likely to churn. The more likely a customer is to churn, the bigger the discount they can be offered to entice them to stay.
+
+\section{Methods}
+
+In this section we present an overview of the steps taken from cleaning all the way to applying models to the data. For more detail, please see the source code here
+
+\section{Results}
+
+\section{Conclusion}
+
+\section{Evaluation}
+
+\end{document}          
