@@ -90,7 +90,7 @@ In this subsection we outline the methods for cleaning and merging then removing
 
 \subsubsection{Loading}
 
-On downloading and reading the csv files into dataframes, pandas gives a warning that columns have mixed types for dataset B. This will be addressed in the next section, for now we drop columns that are not present in both datasets to leave us with the columns we will use.
+On downloading and reading the CSV files into dataframes, pandas gives a warning that columns have mixed types for dataset B. This will be addressed in the next section, for now we drop columns that are not present in both datasets to leave us with the columns we will use.
 
 \subsubsection{Invalid Numbers}
 
@@ -157,6 +157,8 @@ Now that the data is ready to be analysed, we split the data into training and v
 	\item \href{https://keras.io/api/models/sequential/#sequential-class}{Convolutional Neural Network} (CNN) - Keras implementation of a sequential CNN model
 \end{itemize}
 
+\newpage
+
 \section{Results}
 
 Our first graph simply shows the ratio of churned to not churned customers in the dataset:
@@ -164,7 +166,7 @@ Our first graph simply shows the ratio of churned to not churned customers in th
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.5]{churn_proportion}
-	\caption{Pie chart showing the proportion of the dataset that is churned (20.42\%) against the proportion that is not churned (79.58\%)}
+	\caption{Pie chart showing the proportion of the dataset that is churned (20.42\%) against the proportion that is not churned (79.58\%) (\href{https://github.com/ray33ee/Understanding-predicting-and-preventing-churn/blob/main/tex/churn_proportion.png?raw=true}{larger image})}
 \end{figure}
 
 As we can see the dataset is heavily biased towards customers who have not churned. This is not surprising as, at least for successful companies, churn should be low. This bias is very important to keep in mind however, since optimising models to predict churn could result in finding local solutions which simply guess ‘not churn’ and do not predict at all. Because of the bias in the dataset, a model which trivially predicts ‘not churned’ would have an accuracy of around 80\%. Later on we discuss how we can look out for models that do this, and we even see an example of a poor neural network which takes this approach but looks to have a high accuracy.
@@ -174,7 +176,7 @@ For the next few charts we compare the churned vs non-churned samples over vario
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.4]{age_by_churn}
-	\caption{Historgram showing the distribution of age for non churned customers that has a positive skew, and a second histogram showing the distribution for churned customers which skews negatively. }
+	\caption{Histogram showing the distribution of age for non churned customers that has a positive skew, and a second histogram showing the distribution for churned customers which skews negatively. (\href{https://github.com/ray33ee/Understanding-predicting-and-preventing-churn/blob/main/tex/age_by_churn.png?raw=true}{larger image})}
 \end{figure}
 
 As we will see not all plots show any correlation, but in this case there seems to be a strong link between age and churn. The not churned histogram skews left, showing a younger age, whereas the churned histogram skews right, possibly meaning that churned customers are older than not churned. Next we have customer activity:
@@ -184,7 +186,7 @@ As we will see not all plots show any correlation, but in this case there seems 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.5]{activity_by_churn}
-	\caption{Historgram showing the distribution of age for non churned customers that has a positive skew, and a second histogram showing the distribution for churned customers which skews negatively. }
+	\caption{Histogram showing the distribution of age for non churned customers that has a positive skew, and a second histogram showing the distribution for churned customers which skews negatively. (\href{https://github.com/ray33ee/Understanding-predicting-and-preventing-churn/blob/main/tex/activity_by_churn.png?raw=true}{larger image})}
 \end{figure}
 
 Here we see that vastly more users are inactive in the churned group which could suggest that inactivity leads to churn. However, it is important to note here that we cannot say which way the correlation flows, and indeed in this case it is more likely that the explanation is that customers who leave become inactive. If the causation does flow this way, customer activity may not be an accurate way to predict churn, as churn may come after inactivity. Up next is a plot of the number of products purchased by customers:
@@ -192,7 +194,7 @@ Here we see that vastly more users are inactive in the churned group which could
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.5]{products_by_churn}
-	\caption{Historgram showing the distribution of age for non churned customers that has a positive skew, and a second histogram showing the distribution for churned customers which skews negatively. }
+	\caption{Histogram showing the distribution of age for non churned customers that has a positive skew, and a second histogram showing the distribution for churned customers which skews negatively. (\href{https://github.com/ray33ee/Understanding-predicting-and-preventing-churn/blob/main/tex/products_by_churn.png?raw=true}{larger image})}
 \end{figure}
 
 Here again we see big differences between churn and not churned customers, namely that it is much more common for not-churned customers to have purchased more than one product. Purchasing more than one product could be a big indicator that a customer won’t churn. Finally we have plots for the other features, however these plots do not seem to show many differences between churn and not-churn so warrant no further discussion:
@@ -203,54 +205,54 @@ Here again we see big differences between churn and not churned customers, namel
 	\begin{subfigure}[t]{0.55\textwidth}
 		\centering
 		\includegraphics[height=2in]{account_balance_by_churn}
-		\caption{Account balances for churn and non-churned customers}
+		\caption{Account balances for churn and non-churned customers  (\href{https://github.com/ray33ee/Understanding-predicting-and-preventing-churn/blob/main/tex/account_balance_by_churn.png?raw=true}{larger image})}
 	\end{subfigure}%
 	~ 
 	\begin{subfigure}[t]{0.5\textwidth}
 		\centering
 		\includegraphics[height=2in]{estimated_salary_by_churn}
-		\caption{Estimated salaries for churn and non-churned customers}
+		\caption{Estimated salaries for churn and non-churned customers (\href{https://github.com/ray33ee/Understanding-predicting-and-preventing-churn/blob/main/tex/estimated_salary_by_churn.png?raw=true}{larger image})}
 	\end{subfigure}
 	
 	\begin{subfigure}[t]{0.55\textwidth}
 		\centering
 		\includegraphics[height=2in]{credit_score_by_churn}
-		\caption{Credit scores for churn and non-churned customers}
+		\caption{Credit scores for churn and non-churned customers (\href{https://github.com/ray33ee/Understanding-predicting-and-preventing-churn/blob/main/tex/credit_score_by_churn.png?raw=true}{larger image})}
 	\end{subfigure}%
 	~
 	\begin{subfigure}[t]{0.5\textwidth}
 		\centering
 		\includegraphics[height=2in]{tenure_by_churn}
-		\caption{Tenures for churn and non-churned customers}
+		\caption{Tenures for churn and non-churned customers (\href{https://github.com/ray33ee/Understanding-predicting-and-preventing-churn/blob/main/tex/tenure_by_churn.png?raw=true}{larger image})}
 	\end{subfigure}
-	\caption{Frequency distrubutions by churn for account balance (a), estimated salary (b), credit scores (c) and tenure (d) showing no real difference between churn and non-churned customers}
+	\caption{Frequency distributions by churn for account balance (a), estimated salary (b), credit scores (c) and tenure (d) showing no real difference between churn and non-churned customers}
 \end{figure*}
 
-The final section of our describtive statistics analysis summarises the plots we have seen so far with a correlation matrix:
+The final section of our descriptive statistics analysis summarises the plots we have seen so far with a correlation matrix:
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.47]{correlation}
-	\caption{Correlation matrix for all attributes showing a correlation between churn and age, account balance, number of products and activity}
+	\includegraphics[scale=0.46]{correlation}
+	\caption{Correlation matrix for all attributes showing a correlation between churn and age, account balance, number of products and activity (\href{https://github.com/ray33ee/Understanding-predicting-and-preventing-churn/blob/main/tex/correlation.png?raw=true}{larger image})}
 \end{figure}
 
 This correlation matrix confirms what we have seen so far, namely a correlation with churn against Age, number of products and activity, it also shows a correlation with tenure too.
 
 These results are extremely promising, as they show that the data is correlated and connected and that optimisation may be used to predict churn.
 
-Before we start optimising, our last step is to use PCA to reduce the dimensionality of the dataset to 2 or 3 dimensions, then plot these points on 2D and 3D scatter graphs, coloring points based on churn. Here are the results:
+Before we start optimising, our last step is to use PCA to reduce the dimensionality of the dataset to 2 or 3 dimensions, then plot these points on 2D and 3D scatter graphs, colouring points based on churn. Here are the results:
 
 \begin{figure*}[h!]
 	\centering
 	\begin{subfigure}[t]{0.55\textwidth}
 		\centering
 		\includegraphics[height=3in]{2d}
-		\caption{2D PCA visualisation with points coloured by churn}
+		\caption{2D PCA visualisation with points coloured by churn (\href{https://github.com/ray33ee/Understanding-predicting-and-preventing-churn/blob/main/tex/2d.png?raw=true}{larger image})}
 	\end{subfigure}
 	\begin{subfigure}[t]{0.55\textwidth}
 		\centering
 		\includegraphics[height=3in]{3d}
-		\caption{3D PCA visualisation with points coloured by churn}
+		\caption{3D PCA visualisation with points coloured by churn (\href{https://github.com/ray33ee/Understanding-predicting-and-preventing-churn/blob/main/tex/3d.png?raw=true}{larger image})}
 	\end{subfigure}
 	\caption{2D (a) and 3D (b) PCA visualisations showing no visible pattern between churn and non churned data points}
 \end{figure*}
@@ -262,15 +264,15 @@ As PCA has not given any extra insight into our dataset, we move on to applying 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.6]{9cm}
-	\caption{Confusion matrices (by percentage prediction) for all 9 models used, displaying accuracy and model type too}
+	\caption{Confusion matrices (by percentage prediction) for all 9 models used, displaying accuracy and model type too (\href{https://github.com/ray33ee/Understanding-predicting-and-preventing-churn/blob/main/tex/9cm.png?raw=true}{larger image})}
 \end{figure}
 
-There is a lot going on in this one plot, so lets start with the LGBM model confusion matrix:
+There is a lot going on in this one plot, so lets start with the \winningmodellong model confusion matrix:
 
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=1]{rf_cm}
-	\caption{Confusion matrices  for \winningmodellong (\winningmodelshort) which has the highest accuracy (\winningaccuracy) the best false negative rate (\winningfnrate) and the best true positive accuracy (\winningtpaccuracy)}
+	\caption{Confusion matrices  for \winningmodellong (\winningmodelshort) which has the highest accuracy (\winningaccuracy) the best false negative rate (\winningfnrate) and the best true positive accuracy (\winningtpaccuracy) (\href{https://github.com/ray33ee/Understanding-predicting-and-preventing-churn/blob/main/tex/rf_cm.png?raw=true}{larger image})}
 \end{figure}
 
 First we note that the confusion matrix does not show integer values in the table, but decimals. This is because we show the percentage based on the predicted label. So in the \winningmodelshort example, when the model predicted a ‘0’ is was correct \winningtpaccuracy of the time, and when it predicted a ‘1’ it was correct \winningtnrate of the time. Presenting the matrix in this was is important as the dataset is very biased towards not churn, so showing the results as percentages removes this bias. It also shows us the percentage of time the model is a true positive. This is important as for models that guess randomly this value will be about 20\%, and for models that predict 0 this will be 0\%. Getting a high percentage (\winningtnrate in this case) is enough to convince us that this is not guesswork. We also see the overall accuracy of this model, \winningaccuracy. 
@@ -284,15 +286,15 @@ For comparison, we now show two confusion matrices of trivial models, the first 
 	\begin{subfigure}[t]{0.55\textwidth}
 		\centering
 		\includegraphics[height=2.7in]{trivial_0}
-		\caption{Confusion matrix of a model which guesses 'not churned' every time, showing a true positive rate of 0\% but an overall accuracy of around 80\%}
+		\caption{Confusion matrix of a model which guesses 'not churned' every time, showing a true positive rate of 0\% but an overall accuracy of around 80\%  (\href{https://github.com/ray33ee/Understanding-predicting-and-preventing-churn/blob/main/tex/trivial_0.png?raw=true}{larger image})}
 	\end{subfigure}%
 	~
 	\begin{subfigure}[t]{0.55\textwidth}
 		\centering
 		\includegraphics[height=2.7in]{trivial_guesser}
-		\caption{Confusion matrix of a model which guesses uniformly randomly, showing a true positive rate of 20\%}
+		\caption{Confusion matrix of a model which guesses uniformly randomly, showing a true positive rate of 20\% (\href{https://github.com/ray33ee/Understanding-predicting-and-preventing-churn/blob/main/tex/trivial_guesser.png?raw=true}{larger image})}
 	\end{subfigure}
-	\caption{Confusion matrrices of poor trivial models that may have high overall accuracies (80\% in both cases) but very poor true positive rates (under 20\%)}
+	\caption{Confusion matrices of poor trivial models that may have high overall accuracies (80\% in both cases) but very poor true positive rates (under 20\%)}
 \end{figure*}
 
 \section{Conclusion}
@@ -326,7 +328,15 @@ Finally we propose a list of next steps:
 Overall the accuracy of the models are reasonably high, and this shows that it is possible to predict churn from the data. However it would be ideal to get an accuracy above \winningaccuracy, and here are some steps we could take to achieve this:
 
 \begin{enumerate}
-	\item Include more customer features, such as how many complaints a customer has had, how they rated any customer service or support tickets, and instead of a yes/no for activity give a numeric value (i.e. time since last active)
+	\item Include more customer features, such as 
+	\begin{itemize}
+		\item number of complaints
+		\item customer service rating
+		\item support rating
+		\item time since last activity on account
+		\item how much money borrowed from bank
+		\item number of promotional offers received
+	\end{itemize}
 	\item Include more diverse customers, such as customers from other countries, religions, etc.
 \end{enumerate}
 

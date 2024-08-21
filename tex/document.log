@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.8.20)  21 AUG 2024 15:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.8.20)  21 AUG 2024 15:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -351,136 +351,131 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 [2]
 
 [3]
-<churn_proportion.png, id=112, 343.2825pt x 302.8113pt>
-File: churn_proportion.png Graphic file (type png)
-<use churn_proportion.png>
-Package pdftex.def Info: churn_proportion.png  used on input line 166.
-(pdftex.def)             Requested size: 171.64082pt x 151.40527pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
 
 [4]
-<age_by_churn.png, id=118, 562.2606pt x 343.2825pt>
+<churn_proportion.png, id=116, 343.2825pt x 302.8113pt>
+File: churn_proportion.png Graphic file (type png)
+<use churn_proportion.png>
+Package pdftex.def Info: churn_proportion.png  used on input line 168.
+(pdftex.def)             Requested size: 171.64082pt x 151.40527pt.
+<age_by_churn.png, id=120, 562.2606pt x 343.2825pt>
 File: age_by_churn.png Graphic file (type png)
 <use age_by_churn.png>
-Package pdftex.def Info: age_by_churn.png  used on input line 176.
+Package pdftex.def Info: age_by_churn.png  used on input line 178.
 (pdftex.def)             Requested size: 224.90025pt x 137.31056pt.
 
 
 [5 <./churn_proportion.png> <./age_by_churn.png>]
-<activity_by_churn.png, id=127, 562.2606pt x 343.2825pt>
+<activity_by_churn.png, id=131, 562.2606pt x 343.2825pt>
 File: activity_by_churn.png Graphic file (type png)
 <use activity_by_churn.png>
-Package pdftex.def Info: activity_by_churn.png  used on input line 186.
+Package pdftex.def Info: activity_by_churn.png  used on input line 188.
 (pdftex.def)             Requested size: 281.12961pt x 171.64082pt.
-<products_by_churn.png, id=128, 583.2189pt x 343.2825pt>
+<products_by_churn.png, id=134, 583.2189pt x 343.2825pt>
 File: products_by_churn.png Graphic file (type png)
 <use products_by_churn.png>
-Package pdftex.def Info: products_by_churn.png  used on input line 194.
+Package pdftex.def Info: products_by_churn.png  used on input line 196.
 (pdftex.def)             Requested size: 291.60873pt x 171.64082pt.
 
 
 [6
 
  <./activity_by_churn.png> <./products_by_churn.png>]
-<account_balance_by_churn.png, id=137, 562.2606pt x 343.2825pt>
+<account_balance_by_churn.png, id=145, 562.2606pt x 343.2825pt>
 File: account_balance_by_churn.png Graphic file (type png)
 <use account_balance_by_churn.png>
-Package pdftex.def Info: account_balance_by_churn.png  used on input line 205.
+Package pdftex.def Info: account_balance_by_churn.png  used on input line 207.
 (pdftex.def)             Requested size: 236.73982pt x 144.54pt.
-<estimated_salary_by_churn.png, id=138, 562.2606pt x 343.2825pt>
+<estimated_salary_by_churn.png, id=148, 562.2606pt x 343.2825pt>
 File: estimated_salary_by_churn.png Graphic file (type png)
 <use estimated_salary_by_churn.png>
-Package pdftex.def Info: estimated_salary_by_churn.png  used on input line 211.
+Package pdftex.def Info: estimated_salary_by_churn.png  used on input line 213.
 
 (pdftex.def)             Requested size: 236.73982pt x 144.54pt.
 
-Overfull \hbox (19.92982pt too wide) in paragraph at lines 211--212
+Overfull \hbox (19.92982pt too wide) in paragraph at lines 213--214
  [][] 
  []
 
 
-Overfull \hbox (26.12674pt too wide) in paragraph at lines 203--214
+Overfull \hbox (26.12674pt too wide) in paragraph at lines 205--216
  [][]  [] 
  []
 
-<credit_score_by_churn.png, id=139, 562.2606pt x 343.2825pt>
+<credit_score_by_churn.png, id=151, 562.2606pt x 343.2825pt>
 File: credit_score_by_churn.png Graphic file (type png)
 <use credit_score_by_churn.png>
-Package pdftex.def Info: credit_score_by_churn.png  used on input line 217.
+Package pdftex.def Info: credit_score_by_churn.png  used on input line 219.
 (pdftex.def)             Requested size: 236.73982pt x 144.54pt.
-<tenure_by_churn.png, id=140, 562.2606pt x 343.2825pt>
+<tenure_by_churn.png, id=154, 562.2606pt x 343.2825pt>
 File: tenure_by_churn.png Graphic file (type png)
 <use tenure_by_churn.png>
-Package pdftex.def Info: tenure_by_churn.png  used on input line 223.
+Package pdftex.def Info: tenure_by_churn.png  used on input line 225.
 (pdftex.def)             Requested size: 236.73982pt x 144.54pt.
 
-Overfull \hbox (19.92982pt too wide) in paragraph at lines 223--224
+Overfull \hbox (19.92982pt too wide) in paragraph at lines 225--226
  [][] 
  []
 
 
-Overfull \hbox (26.12674pt too wide) in paragraph at lines 215--226
+Overfull \hbox (26.12674pt too wide) in paragraph at lines 217--228
  [][]  [] 
  []
 
-<correlation.png, id=141, 500.1084pt x 392.4261pt>
+<correlation.png, id=157, 500.1084pt x 392.4261pt>
 File: correlation.png Graphic file (type png)
 <use correlation.png>
-Package pdftex.def Info: correlation.png  used on input line 233.
-(pdftex.def)             Requested size: 235.05098pt x 184.44029pt.
+Package pdftex.def Info: correlation.png  used on input line 235.
+(pdftex.def)             Requested size: 230.05266pt x 180.51819pt.
 
 
 [7
 
  <./account_balance_by_churn.png> <./estimated_salary_by_churn.png> <./credit_s
 core_by_churn.png> <./tenure_by_churn.png> <./correlation.png>]
-<2d.png, id=155, 412.6617pt x 334.6101pt>
+<2d.png, id=173, 412.6617pt x 334.6101pt>
 File: 2d.png Graphic file (type png)
 <use 2d.png>
-Package pdftex.def Info: 2d.png  used on input line 247.
+Package pdftex.def Info: 2d.png  used on input line 249.
 (pdftex.def)             Requested size: 267.39575pt x 216.81pt.
 
-Overfull \hbox (28.90344pt too wide) in paragraph at lines 247--248
+Overfull \hbox (28.90344pt too wide) in paragraph at lines 249--250
  [][] 
  []
 
-<3d.png, id=156, 460.3599pt x 476.982pt>
+<3d.png, id=176, 460.3599pt x 476.982pt>
 File: 3d.png Graphic file (type png)
 <use 3d.png>
-Package pdftex.def Info: 3d.png  used on input line 252.
+Package pdftex.def Info: 3d.png  used on input line 254.
 (pdftex.def)             Requested size: 209.25334pt x 216.81pt.
 
 
 [8 <./2d.png> <./3d.png>]
-<9cm.png, id=164, 444.4605pt x 350.5095pt>
+<9cm.png, id=186, 444.4605pt x 350.5095pt>
 File: 9cm.png Graphic file (type png)
 <use 9cm.png>
-Package pdftex.def Info: 9cm.png  used on input line 264.
+Package pdftex.def Info: 9cm.png  used on input line 266.
 (pdftex.def)             Requested size: 266.67834pt x 210.30733pt.
-<rf_cm.png, id=165, 160.72546pt x 149.43329pt>
+<rf_cm.png, id=189, 160.72546pt x 149.43329pt>
 File: rf_cm.png Graphic file (type png)
 <use rf_cm.png>
-Package pdftex.def Info: rf_cm.png  used on input line 272.
+Package pdftex.def Info: rf_cm.png  used on input line 274.
 (pdftex.def)             Requested size: 160.72507pt x 149.4329pt.
 
 
 [9 <./9cm.png> <./rf_cm.png>]
-<trivial_0.png, id=174, 379.4175pt x 327.3831pt>
+<trivial_0.png, id=200, 379.4175pt x 327.3831pt>
 File: trivial_0.png Graphic file (type png)
 <use trivial_0.png>
-Package pdftex.def Info: trivial_0.png  used on input line 286.
+Package pdftex.def Info: trivial_0.png  used on input line 288.
 (pdftex.def)             Requested size: 226.14699pt x 195.12877pt.
-<trivial_guesser.png, id=175, 362.7954pt x 327.3831pt>
+<trivial_guesser.png, id=203, 362.7954pt x 327.3831pt>
 File: trivial_guesser.png Graphic file (type png)
 <use trivial_guesser.png>
-Package pdftex.def Info: trivial_guesser.png  used on input line 292.
+Package pdftex.def Info: trivial_guesser.png  used on input line 294.
 (pdftex.def)             Requested size: 216.23961pt x 195.12877pt.
 
-Overfull \hbox (47.80905pt too wide) in paragraph at lines 284--295
+Overfull \hbox (47.80905pt too wide) in paragraph at lines 286--297
  [][]  [] 
  []
 
@@ -503,7 +498,7 @@ Here is how much of TeX's memory you used:
  33378 multiletter control sequences out of 15000+600000
  562958 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,8n,79p,1092b,526s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,8n,79p,1092b,580s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\willc\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1000.pk><C:/Users/willc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmbx10.pfb><C:/Users/willc/AppData/Local/Programs/MiKTeX/fonts/type1/publ
@@ -512,9 +507,9 @@ ype1/public/amsfonts/cm/cmr10.pfb><C:/Users/willc/AppData/Local/Programs/MiKTeX
 /fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/willc/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/willc/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb>
-Output written on document.pdf (11 pages, 653942 bytes).
+Output written on document.pdf (11 pages, 658883 bytes).
 PDF statistics:
- 241 PDF objects out of 1000 (max. 8388607)
+ 271 PDF objects out of 1000 (max. 8388607)
  51 named destinations out of 1000 (max. 500000)
  228 words of extra memory for PDF output out of 10000 (max. 10000000)
 
