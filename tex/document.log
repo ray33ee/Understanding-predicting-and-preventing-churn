@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.8.20)  20 AUG 2024 22:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.8.20)  21 AUG 2024 15:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -250,25 +250,25 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 ) (document.aux)
 \openout1 = `document.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-Package hyperref Info: Link coloring OFF on input line 19.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+Package hyperref Info: Link coloring OFF on input line 23.
  (document.out) (document.out)
 \@outlinefile=\write3
 \openout3 = `document.out'.
@@ -337,11 +337,11 @@ Package caption Info: End \AtBeginDocument code.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 21.
+(Font)              <12> on input line 25.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 21.
+(Font)              <8> on input line 25.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 21.
+(Font)              <6> on input line 25.
 
 
 [1
@@ -354,7 +354,7 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 <churn_proportion.png, id=112, 343.2825pt x 302.8113pt>
 File: churn_proportion.png Graphic file (type png)
 <use churn_proportion.png>
-Package pdftex.def Info: churn_proportion.png  used on input line 162.
+Package pdftex.def Info: churn_proportion.png  used on input line 166.
 (pdftex.def)             Requested size: 171.64082pt x 151.40527pt.
 
 
@@ -366,7 +366,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <age_by_churn.png, id=118, 562.2606pt x 343.2825pt>
 File: age_by_churn.png Graphic file (type png)
 <use age_by_churn.png>
-Package pdftex.def Info: age_by_churn.png  used on input line 172.
+Package pdftex.def Info: age_by_churn.png  used on input line 176.
 (pdftex.def)             Requested size: 224.90025pt x 137.31056pt.
 
 
@@ -374,12 +374,12 @@ Package pdftex.def Info: age_by_churn.png  used on input line 172.
 <activity_by_churn.png, id=127, 562.2606pt x 343.2825pt>
 File: activity_by_churn.png Graphic file (type png)
 <use activity_by_churn.png>
-Package pdftex.def Info: activity_by_churn.png  used on input line 182.
+Package pdftex.def Info: activity_by_churn.png  used on input line 186.
 (pdftex.def)             Requested size: 281.12961pt x 171.64082pt.
 <products_by_churn.png, id=128, 583.2189pt x 343.2825pt>
 File: products_by_churn.png Graphic file (type png)
 <use products_by_churn.png>
-Package pdftex.def Info: products_by_churn.png  used on input line 190.
+Package pdftex.def Info: products_by_churn.png  used on input line 194.
 (pdftex.def)             Requested size: 291.60873pt x 171.64082pt.
 
 
@@ -389,48 +389,48 @@ Package pdftex.def Info: products_by_churn.png  used on input line 190.
 <account_balance_by_churn.png, id=137, 562.2606pt x 343.2825pt>
 File: account_balance_by_churn.png Graphic file (type png)
 <use account_balance_by_churn.png>
-Package pdftex.def Info: account_balance_by_churn.png  used on input line 201.
+Package pdftex.def Info: account_balance_by_churn.png  used on input line 205.
 (pdftex.def)             Requested size: 236.73982pt x 144.54pt.
 <estimated_salary_by_churn.png, id=138, 562.2606pt x 343.2825pt>
 File: estimated_salary_by_churn.png Graphic file (type png)
 <use estimated_salary_by_churn.png>
-Package pdftex.def Info: estimated_salary_by_churn.png  used on input line 207.
+Package pdftex.def Info: estimated_salary_by_churn.png  used on input line 211.
 
 (pdftex.def)             Requested size: 236.73982pt x 144.54pt.
 
-Overfull \hbox (19.92982pt too wide) in paragraph at lines 207--208
+Overfull \hbox (19.92982pt too wide) in paragraph at lines 211--212
  [][] 
  []
 
 
-Overfull \hbox (26.12674pt too wide) in paragraph at lines 199--210
+Overfull \hbox (26.12674pt too wide) in paragraph at lines 203--214
  [][]  [] 
  []
 
 <credit_score_by_churn.png, id=139, 562.2606pt x 343.2825pt>
 File: credit_score_by_churn.png Graphic file (type png)
 <use credit_score_by_churn.png>
-Package pdftex.def Info: credit_score_by_churn.png  used on input line 213.
+Package pdftex.def Info: credit_score_by_churn.png  used on input line 217.
 (pdftex.def)             Requested size: 236.73982pt x 144.54pt.
 <tenure_by_churn.png, id=140, 562.2606pt x 343.2825pt>
 File: tenure_by_churn.png Graphic file (type png)
 <use tenure_by_churn.png>
-Package pdftex.def Info: tenure_by_churn.png  used on input line 219.
+Package pdftex.def Info: tenure_by_churn.png  used on input line 223.
 (pdftex.def)             Requested size: 236.73982pt x 144.54pt.
 
-Overfull \hbox (19.92982pt too wide) in paragraph at lines 219--220
+Overfull \hbox (19.92982pt too wide) in paragraph at lines 223--224
  [][] 
  []
 
 
-Overfull \hbox (26.12674pt too wide) in paragraph at lines 211--222
+Overfull \hbox (26.12674pt too wide) in paragraph at lines 215--226
  [][]  [] 
  []
 
 <correlation.png, id=141, 500.1084pt x 392.4261pt>
 File: correlation.png Graphic file (type png)
 <use correlation.png>
-Package pdftex.def Info: correlation.png  used on input line 229.
+Package pdftex.def Info: correlation.png  used on input line 233.
 (pdftex.def)             Requested size: 235.05098pt x 184.44029pt.
 
 
@@ -441,23 +441,54 @@ core_by_churn.png> <./tenure_by_churn.png> <./correlation.png>]
 <2d.png, id=155, 412.6617pt x 334.6101pt>
 File: 2d.png Graphic file (type png)
 <use 2d.png>
-Package pdftex.def Info: 2d.png  used on input line 243.
+Package pdftex.def Info: 2d.png  used on input line 247.
 (pdftex.def)             Requested size: 267.39575pt x 216.81pt.
 
-Overfull \hbox (28.90344pt too wide) in paragraph at lines 243--244
+Overfull \hbox (28.90344pt too wide) in paragraph at lines 247--248
  [][] 
  []
 
 <3d.png, id=156, 460.3599pt x 476.982pt>
 File: 3d.png Graphic file (type png)
 <use 3d.png>
-Package pdftex.def Info: 3d.png  used on input line 248.
+Package pdftex.def Info: 3d.png  used on input line 252.
 (pdftex.def)             Requested size: 209.25334pt x 216.81pt.
 
 
 [8 <./2d.png> <./3d.png>]
+<9cm.png, id=164, 444.4605pt x 350.5095pt>
+File: 9cm.png Graphic file (type png)
+<use 9cm.png>
+Package pdftex.def Info: 9cm.png  used on input line 264.
+(pdftex.def)             Requested size: 266.67834pt x 210.30733pt.
+<rf_cm.png, id=165, 160.72546pt x 149.43329pt>
+File: rf_cm.png Graphic file (type png)
+<use rf_cm.png>
+Package pdftex.def Info: rf_cm.png  used on input line 272.
+(pdftex.def)             Requested size: 160.72507pt x 149.4329pt.
 
-[9] (document.aux)
+
+[9 <./9cm.png> <./rf_cm.png>]
+<trivial_0.png, id=174, 379.4175pt x 327.3831pt>
+File: trivial_0.png Graphic file (type png)
+<use trivial_0.png>
+Package pdftex.def Info: trivial_0.png  used on input line 286.
+(pdftex.def)             Requested size: 226.14699pt x 195.12877pt.
+<trivial_guesser.png, id=175, 362.7954pt x 327.3831pt>
+File: trivial_guesser.png Graphic file (type png)
+<use trivial_guesser.png>
+Package pdftex.def Info: trivial_guesser.png  used on input line 292.
+(pdftex.def)             Requested size: 216.23961pt x 195.12877pt.
+
+Overfull \hbox (47.80905pt too wide) in paragraph at lines 284--295
+ [][]  [] 
+ []
+
+
+
+[10 <./trivial_0.png> <./trivial_guesser.png>]
+
+[11] (document.aux)
  ***********
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-07-20>
@@ -466,13 +497,13 @@ Package rerunfilecheck Info: File `document.out' has not changed.
 (rerunfilecheck)             Checksum: F3A6E274503392324A220079B70859F9;2051.
  ) 
 Here is how much of TeX's memory you used:
- 10578 strings out of 473898
- 173144 string characters out of 5726479
+ 10643 strings out of 473898
+ 174177 string characters out of 5726479
  1939960 words of memory out of 5000000
- 33328 multiletter control sequences out of 15000+600000
+ 33378 multiletter control sequences out of 15000+600000
  562958 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,8n,79p,872b,526s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,8n,79p,1092b,526s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\willc\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1000.pk><C:/Users/willc/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmbx10.pfb><C:/Users/willc/AppData/Local/Programs/MiKTeX/fonts/type1/publ
@@ -481,9 +512,9 @@ ype1/public/amsfonts/cm/cmr10.pfb><C:/Users/willc/AppData/Local/Programs/MiKTeX
 /fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/willc/AppData/Local/Program
 s/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/willc/AppData/Local
 /Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb>
-Output written on document.pdf (9 pages, 526083 bytes).
+Output written on document.pdf (11 pages, 653942 bytes).
 PDF statistics:
- 207 PDF objects out of 1000 (max. 8388607)
- 36 named destinations out of 1000 (max. 500000)
- 208 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 241 PDF objects out of 1000 (max. 8388607)
+ 51 named destinations out of 1000 (max. 500000)
+ 228 words of extra memory for PDF output out of 10000 (max. 10000000)
 

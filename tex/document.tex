@@ -9,7 +9,11 @@
 
 % Define a few constants used in the report that we can change here if needed
 \newcommand{\winningaccuracy}{86\%\xspace}
-\newcommand{\winningfnrate}{11\%\xspace}
+\newcommand{\winningtpaccuracy}{90\%\xspace}
+\newcommand{\winningfnrate}{10\%\xspace}
+\newcommand{\winningmodelshort}{RF\xspace}
+\newcommand{\winningmodellong}{Random Forest\xspace}
+\newcommand{\winningtnrate}{73\%\xspace}
 
 % Title Page
 \title{Understanding, predicting and preventing Churn}
@@ -142,15 +146,15 @@ Now the data is cleaned and normalised we can apply 2 component and 3 component 
 Now that the data is ready to be analysed, we split the data into training and validation sets and apply a range of models to the data. Our goal in this is of course to predict churn, which comes in two categories, churned and not churned. Because of this, the types of models we use are classifiers and regression models. In this analysis we try 9 different models and compare their effectiveness, namely:
 
 \begin{itemize}
-	\item \href{https://github.com/microsoft/LightGBM}{LightGBM} - A fast gradient boosting framework based on decision trees
-	\item \href{https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html}{Logistic Regression}
-	\item \href{https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html}{Random Forest classifier}
-	\item \href{https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html}{Gradient Boosting classifier}
-	\item \href{https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html}{MLP classifier}
-	\item \href{https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.AdaBoostClassifier.html}{Ada Boost classifier}
-	\item \href{https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html}{K-nearest neighbours}
-	\item \href{https://scikit-learn.org/stable/modules/generated/sklearn.discriminant_analysis.LinearDiscriminantAnalysis.html}{Linear Discriminant Analysis}
-	\item \href{https://keras.io/api/models/sequential/#sequential-class}{Convolutional Neural Network} - Keras implementation of a sequential CNN model
+	\item \href{https://github.com/microsoft/LightGBM}{LightGBM} (LGBM) - A fast gradient boosting framework based on decision trees
+	\item \href{https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html}{Logistic Regression} (LR)
+	\item \href{https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html}{Random Forest classifier} (RF)
+	\item \href{https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.GradientBoostingClassifier.html}{Gradient Boosting classifier} (GBC)
+	\item \href{https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html}{MLP classifier} (MLP)
+	\item \href{https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.AdaBoostClassifier.html}{Ada Boost classifier} (ADA)
+	\item \href{https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html}{K-nearest neighbours} (KNN)
+	\item \href{https://scikit-learn.org/stable/modules/generated/sklearn.discriminant_analysis.LinearDiscriminantAnalysis.html}{Linear Discriminant Analysis} (LDA)
+	\item \href{https://keras.io/api/models/sequential/#sequential-class}{Convolutional Neural Network} (CNN) - Keras implementation of a sequential CNN model
 \end{itemize}
 
 \section{Results}
@@ -255,8 +259,75 @@ Since we removed churn from the PCA analysis, any differences in the churned vs 
 
 As PCA has not given any extra insight into our dataset, we move on to applying our 9 models on the dataset to see if there is any way to extract meaning from the data. We summarise our results with confusion tables from predictions for all 9 models:
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.6]{9cm}
+	\caption{Confusion matrices (by percentage prediction) for all 9 models used, displaying accuracy and model type too}
+\end{figure}
+
+There is a lot going on in this one plot, so lets start with the LGBM model confusion matrix:
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=1]{rf_cm}
+	\caption{Confusion matrices  for \winningmodellong (\winningmodelshort) which has the highest accuracy (\winningaccuracy) the best false negative rate (\winningfnrate) and the best true positive accuracy (\winningtpaccuracy)}
+\end{figure}
+
+First we note that the confusion matrix does not show integer values in the table, but decimals. This is because we show the percentage based on the predicted label. So in the \winningmodelshort example, when the model predicted a ‘0’ is was correct \winningtpaccuracy of the time, and when it predicted a ‘1’ it was correct \winningtnrate of the time. Presenting the matrix in this was is important as the dataset is very biased towards not churn, so showing the results as percentages removes this bias. It also shows us the percentage of time the model is a true positive. This is important as for models that guess randomly this value will be about 20\%, and for models that predict 0 this will be 0\%. Getting a high percentage (\winningtnrate in this case) is enough to convince us that this is not guesswork. We also see the overall accuracy of this model, \winningaccuracy. 
+
+While some models are slightly better than others, they are all around 86\% accurate, even the models that are fundamentally different show no higher than 87\%. This, I suspect is the upper bound of the dataset itself, to have multiple models so closely agree on an accuracy must mean that they cannot extract any more meaning from the data.
+
+For comparison, we now show two confusion matrices of trivial models, the first guesses uniformly randomly for churned/not churned, and the second always guesses not churned:
+
+\begin{figure*}[h!]
+	\centering
+	\begin{subfigure}[t]{0.55\textwidth}
+		\centering
+		\includegraphics[height=2.7in]{trivial_0}
+		\caption{Confusion matrix of a model which guesses 'not churned' every time, showing a true positive rate of 0\% but an overall accuracy of around 80\%}
+	\end{subfigure}%
+	~
+	\begin{subfigure}[t]{0.55\textwidth}
+		\centering
+		\includegraphics[height=2.7in]{trivial_guesser}
+		\caption{Confusion matrix of a model which guesses uniformly randomly, showing a true positive rate of 20\%}
+	\end{subfigure}
+	\caption{Confusion matrrices of poor trivial models that may have high overall accuracies (80\% in both cases) but very poor true positive rates (under 20\%)}
+\end{figure*}
+
 \section{Conclusion}
 
+To get an idea of which models might be better than others we train classifiers, regression models, a neural network model and random forest classifiers on a training set then evaluate their effectiveness based on three main factors:
+
+\begin{enumerate}
+	\item Overall accuracy on the validation set
+	\item True positive accuracy
+	\item Does the model output a yes/no or a more helpful confidence value?
+	\item False negative rate
+\end{enumerate}
+
+Checking the true positive accuracy is very important because the dataset is about 80\% composed of customers who have not churned, and 20\% who have. This means that a model that always guesses not churned would be 80\% accurate. This model is of course highly undesirable, and it would have a true positive accuracy of 0\%. Getting this true positive accuracy as high as possible is what makes an accurate model and proves to be difficult. The third factor is important because it gives more information on the customer (how likely they are to churn or not churn) which can be used to prescribe an outcome more tailored to that customer (Heavy discounts, personalised products, reaching out personally via customer service, etc.). Finally the false negative rate is important because it shows us how many customers the model will predict will stay when in fact they churn. Since this is the worst case outcome, minimising this is important.
+
+From our results we see that the best for accuracy is the \winningmodelshort model, and the best true positive is the \winningmodelshort model. Finally since the CNN is the only model that outputs a confidence value, we see that \winningmodelshort and CNN models are our best bet for the three questions. To give the best of both, I propose a hybrid model which combines the best of both by using the result of \winningmodelshort with the confidence value from CNN, if it agrees with the \winningmodelshort result, if not, no confidence value is provided.
+
+The best model for false negatives is \winningmodelshort. This represents the cases where the model predicts a customer will not leave when they do. This is certainly a worst case scenario as it will result in customers leaving without the model predicting it. Needless to say this metric should be as low as possible, we are fortunate that the rates are low, at \winningfnrate for the \winningmodelshort model.
+
+Finally we propose a list of next steps:
+
+\begin{enumerate}
+	\item Create a python application that applies the model we have chosen and takes customer data and outputs a value indicating a prediction on churn
+	\item Implement this algorithm in the company to predict churn on all customers and also apply it anytime the data changes for a customer (increased age, another product purchased, etc.)
+	\item Use the prediction to decide the best course of action for customers who are predicted to churn. If the chosen model outputs a yes/no answer, then choose and apply an action for customers predicted to churn. If the chosen model gives a confidence value, create and apply a tiered solution that maps confidence values to prescribed actions
+	\item Finally keep track of churn percentages before and after the model is implemented to evaluate the models’ success
+\end{enumerate}
+
 \section{Evaluation}
+
+Overall the accuracy of the models are reasonably high, and this shows that it is possible to predict churn from the data. However it would be ideal to get an accuracy above \winningaccuracy, and here are some steps we could take to achieve this:
+
+\begin{enumerate}
+	\item Include more customer features, such as how many complaints a customer has had, how they rated any customer service or support tickets, and instead of a yes/no for activity give a numeric value (i.e. time since last active)
+	\item Include more diverse customers, such as customers from other countries, religions, etc.
+\end{enumerate}
 
 \end{document}          
